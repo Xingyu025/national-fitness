@@ -14,7 +14,7 @@
     { id: "growth",    file: "growth.html",    no: "02", nav: "十年成就", kicker: "十年，成就是真的" },
     { id: "map",       file: "map.html",       no: "03", nav: "省域地图", kicker: "3.0㎡摊在地图上，是另一副样子" },
     { id: "region",    file: "region.html",    no: "04", nav: "区域真相",   kicker: "\"东西差距\"，其实没那么深" },
-    { id: "structure", file: "structure.html", no: "05", nav: "场地归属", kicker: "42亿㎡，为什么没到家门口？" },
+    { id: "structure", file: "structure.html", no: "05", nav: "场地归属", kicker: "42亿㎡，为什么没到我们家门口？" },
     { id: "soft",      file: "soft.html",      no: "06", nav: "软硬之间",   kicker: "有了场地，就会练了吗？" },
     { id: "people",    file: "people.html",    no: "07", nav: "3㎡的背面",   kicker: "被\"平均\"藏起来的人" },
     { id: "case",      file: "case.html",      no: "08", nav: "两个极端",   kicker: "同一年，两个省的两种日常" },
