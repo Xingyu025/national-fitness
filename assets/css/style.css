@@ -795,7 +795,7 @@ h3, .h3 { font-weight: 700; line-height: 1.4; font-size: clamp(1.15rem, 1.8vw, 1
 @media (hover:hover){ .card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); } }
 
 /* ---- 图片占位组件 ----
-   交付:把 .imgslot 内 .imgslot__note 整段换成 <img src="assets/img/xx.jpg" alt="..."> 即可,
+   交付:把 .imgslot 内 .imgslot__note 整段换成 <img src="assets/img/xx.webp" alt="..."> 即可,
    或直接在 .imgslot 上设 background-image。占位已标注建议比例与内容。 */
 .imgslot { position: relative; border-radius: var(--radius); overflow: hidden;
   border: 1.5px dashed var(--line-2);
@@ -882,17 +882,17 @@ body[data-page="next"] { --bg:#F7F8F6; }
 body[data-page="method"] { --bg:#F6F7F9; }
 
 /* 每板块全屏背景图上传位置 —— 把对应文件放进 assets/img/ 即生效;缺图自动回落灰度 */
-body[data-page="index"] { --bg-image: url("../img/bg-index.jpg"); }
-body[data-page="growth"] { --bg-image: url("../img/bg-growth.jpg"); }
-body[data-page="map"] { --bg-image: url("../img/bg-map.jpg"); }
-body[data-page="region"] { --bg-image: url("../img/bg-region.jpg"); }
-body[data-page="structure"] { --bg-image: url("../img/bg-structure.jpg"); }
-body[data-page="soft"] { --bg-image: url("../img/bg-soft.jpg"); }
-body[data-page="people"] { --bg-image: url("../img/bg-people.jpg"); }
-body[data-page="case"] { --bg-image: url("../img/bg-case.jpg"); }
-body[data-page="promise"] { --bg-image: url("../img/bg-promise.jpg"); }
-body[data-page="next"] { --bg-image: url("../img/bg-next.jpg"); }
-body[data-page="method"] { --bg-image: url("../img/bg-method.jpg"); }
+body[data-page="index"] { --bg-image: url("../img/bg-index.webp"); }
+body[data-page="growth"] { --bg-image: url("../img/bg-growth.webp"); }
+body[data-page="map"] { --bg-image: url("../img/bg-map.webp"); }
+body[data-page="region"] { --bg-image: url("../img/bg-region.webp"); }
+body[data-page="structure"] { --bg-image: url("../img/bg-structure.webp"); }
+body[data-page="soft"] { --bg-image: url("../img/bg-soft.webp"); }
+body[data-page="people"] { --bg-image: url("../img/bg-people.webp"); }
+body[data-page="case"] { --bg-image: url("../img/bg-case.webp"); }
+body[data-page="promise"] { --bg-image: url("../img/bg-promise.webp"); }
+body[data-page="next"] { --bg-image: url("../img/bg-next.webp"); }
+body[data-page="method"] { --bg-image: url("../img/bg-method.webp"); }
 
 /* 全站:引导段(.lede)铺满整行——解除 64ch 窄列,换行交给容器边界;source 小字不受影响 */
 .lede.measure { max-width: none; }
