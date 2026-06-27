@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>场地去哪了 · 家门口的健身圈</title>
+<meta name="description" content="场地总量 42.3 亿㎡很大，但最大块集中在事业单位/学校，城市里单位企业占 76%，学校对外开放率仅约 30%——这就是人均达标却体感缺位的微观机制。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="structure">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<main id="main">
+
+  <!-- ===== 题眼引入 ===== -->
+  <section class="section section--tight">
+    <div class="container">
+      <span class="eyebrow" data-reveal></span>
+      <h1 class="mt-4" data-reveal data-delay="1">42 亿平方米的场地，为什么没到我们家门口？</h1>
+      <p class="lede measure mt-5" data-reveal data-delay="2">
+        人均达标、总量巨大，可城市里“没处练”的体感究竟从哪来？
+        答案藏在两个问题里——这些场地<b style="color:var(--ink)">在哪儿</b>、又对谁<b style="color:var(--ink)">开放</b>。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 先肯：基层下沉 ===== -->
+  <section class="section section--warm-soft" style="border-top:none;padding-top:0;">
+    <div class="container">
+      <h2 data-reveal>先说进步：场地，正在往基层沉</h2>
+      <p class="lede measure mt-4" data-reveal data-delay="1">
+        这些年一个实打实的成就，是场地在向社区和乡村下沉。全国口径下，居委会 + 村委会合计
+        <b style="color:var(--ink)">15.05 亿㎡、占 35.6%</b>（官方称“三分之一以上”）——家门口的基层场地，确实多了。
+      </p>
+      <div class="figure mt-6" data-reveal>
+        <div class="figure__head">
+          <span class="figure__title">全国场地按机构类型构成 · 2024</span>
+          <span class="figure__hint">全国口径 · 事业单位含高校</span>
+        </div>
+        <div id="owner-canvas" class="chart-canvas" style="height:clamp(320px,44vw,400px)"></div>
+        <div class="stackbar__legend mt-4">
+          <span><i style="background:var(--warm)"></i>居委会 + 村委会（社区·乡村，居民可直接用）15.05 亿㎡</span>
+          <span><i style="background:var(--cool)"></i>事业单位（含高校，最大单一类别·开放受限）</span>
+          <span><i style="background:var(--slate)"></i>其他（机关、企业、学校系统其他等）</span>
+        </div>
+        <p class="source">
+          数据来源：中国政府网《专家解读 2024 年全国体育场地统计调查数据》（居委会 5.81 亿、村委会 9.24 亿㎡）；
+          事业单位含高校占比最大、“超过 40%”（2023 数据）。详见<a href="method.html">数据说明</a>。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 但最大块锁住：城市更极端（桑基） ===== -->
+  <section class="section">
+    <div class="container">
+      <p class="pull" data-reveal>
+        但最大的一块，被<em>“圈”在了围墙里</em>。
+      </p>
+      <p class="lede measure mt-6" data-reveal>
+        全国看，事业单位（含高校）就是最大单一类别；到了城市，更极端。以沈阳为例——
+        <b style="color:var(--ink)">机关 + 事业 + 企业占了 76%</b>，居委会能直接给居民用的，只有约 15%。
+      </p>
+
+      <div class="figure mt-6 container--wide" style="margin-inline:0" data-reveal>
+        <div class="figure__head">
+          <span class="figure__title">城市场地流向哪类机构 · 沈阳 2024</span>
+          <span class="figure__hint">城市口径（示例城市） · 悬停看占比</span>
+        </div>
+        <div id="sankey" class="chart-canvas chart-canvas--tall" role="img"
+             aria-label="沈阳市场地按机构类型的桑基图：事业单位、企业、机关合计约 76% 流向单位主导一侧，居委会村委会约 19% 为居民可直接使用"></div>
+        <p class="source">
+          数据来源：沈阳市体育局《2024 年沈阳市体育场地统计调查数据报告》。沈阳为示例城市；
+          <b>城市口径与全国口径不同，不可混用</b>。详见<a href="method.html">数据说明</a>。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 第二根支柱：开放率 ===== -->
+  <section class="section section--cool-soft" style="border-top:none;padding-top:0;">
+    <div class="container">
+      <h2 data-reveal>就算场地在，门也未必开</h2>
+      <p class="lede measure mt-4" data-reveal data-delay="1">
+        这些大头握在单位和学校手里，而学校体育设施对外开放率只有约 <b style="color:var(--ink)">30%</b>。
+        学术研究认为，开放率要达到 <b style="color:var(--ink)">50%</b>，居民平均才能在 1.5 公里内找到场地，基本满足“15 分钟健身圈”。
+      </p>
+
+      <div class="figure mt-6" data-reveal>
+        <div class="gauge">
+          <div class="gauge__bar">
+            <div id="gauge-fill" class="gauge__fill"></div>
+            <div class="gauge__cur" style="left:30%">约 30%</div>
+            <div class="gauge__threshold" style="left:50%"><span>阈值 50%</span></div>
+          </div>
+          <div class="gauge__scale"><span>0%</span><span>50%</span><span>100%</span></div>
+        </div>
+        <p class="source" style="margin-top:var(--s5)">学校体育设施对外开放率约 30%；50% 为满足“15 分钟健身圈”的学术阈值。来源见<a href="method.html">数据说明</a>。</p>
+      </div>
+
+
+      <div class="callout callout--alert callout--media mt-7" data-reveal>
+        <div class="callout__text">
+          <p class="callout__lead">设施完备，却常年闭门闲置。</p>
+          <p class="callout__body">
+          一边是正规商业场馆收费不低、却人满为患；一边是校园里一应俱全的体育设施，课余时间冷冷清清。
+          卡在哪？<b>安全责任界定不清</b>（首要）、维护与人员经费缺固定渠道、缺专业管理、与教学时间冲突。
+        </p>
+        </div>
+        <figure class="callout__media">
+          <img src="assets/img/cal-structure-1.png" alt="场地闲置示意" loading="lazy" onerror="this.closest('.callout__media').remove()">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 收束:达标却体感缺位 ===== -->
+  <section class="section">
+    <div class="container">
+      <p class="pull" data-reveal>
+        于是，人均<span class="cool">“达标”</span>，体感却<em>“缺位”</em>。
+      </p>
+      <p class="lede measure mt-6" data-reveal>
+        总量很大（42.3 亿㎡），但大头锁在单位和学校；城市里单位企业占去四分之三，学校又只开放三成——
+        居民“家门口”真正能自由进入的，很薄。这，正是<b style="color:var(--ink)">最有钱的上海人均场地却垫底</b>的微观机制：
+        不是没建，是建的地方，你进不去。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 建设性收尾：开放围墙 ===== -->
+  <section class="section" style="border-top:none;padding-top:0;">
+    <div class="container">
+      <div class="callout callout--warm callout--media" data-reveal>
+        <div class="callout__text">
+          <p class="callout__lead">好在，门正在被推开。</p>
+          <p class="callout__body">
+          解法其实清楚：把单位和学校的场地开放出来。2023 年新修订的《体育法》<b>第 86 条</b>明确鼓励机关、学校、企事业单位
+          的体育场地向公众开放；上海、深圳等地已在试——深圳要求非寄宿制公立中小学，平日开放不少于 2 小时、节假日寒暑假不少于 8 小时。
+          把“围墙”变成“门”，家门口的健身圈才补得上。
+        </p>
+        </div>
+        <figure class="callout__media">
+          <img src="assets/img/cal-structure-2.png" alt="场地开放示意" loading="lazy" onerror="this.closest('.callout__media').remove()">
+        </figure>
+      </div>
+
+      <p class="pull mt-8" data-reveal>
+        不过，就算门开了、场地够了——<br>
+        会不会用、有没有人教，又是另一回事。
+      </p>
+      <p class="lede measure mt-6" data-reveal>
+        场地是“硬”的，指导、组织、赛事是“软”的。硬的一半铺开了，软的一半还差多少？
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- 引入顺序:echarts → 主题 → 数据 → 绘图 -->
+<script src="assets/js/echarts.min.js"></script>
+<script src="assets/js/chart-theme.js"></script>
+<script src="assets/data/structure-data.js"></script>
+<script>
+(function () {
+  var S = window.STRUCTURE_DATA || {};
+  var P = window.FITNESS_PALETTE || {};
+  var warm = P.warm || '#F2994A', cool = P.cool || '#2D6CDF', coolDeep = P.coolDeep || '#1E4FB0';
+  var warmDeep = P.warmDeep || '#C9701B', slate = P.slate || '#5B7083', ink2 = P.ink2 || '#4A515C';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- 全国机构构成(环形图) ----------
+  var ownerEl = document.getElementById('owner-canvas');
+  if (ownerEl && typeof echarts !== 'undefined') {
+    var oc = echarts.init(ownerEl, 'fitness', { renderer: 'canvas' });
+    oc.setOption({
+      tooltip: { trigger: 'item', formatter: '{b}<br/>占比 {d}%' },
+      title: { text: '42.3', subtext: '亿㎡ · 全国场地', left: 'center', top: '39%',
+        textStyle: { fontSize: 26, color: '#1F2329', fontWeight: 800 },
+        subtextStyle: { fontSize: 12, color: '#79828F' }, itemGap: 4 },
+      series: [{
+        type: 'pie', radius: ['46%', '72%'], center: ['50%', '47%'],
+        avoidLabelOverlap: true, padAngle: 2, minAngle: 6,
+        itemStyle: { borderColor: '#FFFFFF', borderWidth: 2, borderRadius: 5 },
+        label: { formatter: '{b}\n{d}%', color: '#4A515C', fontSize: 12, lineHeight: 16 },
+        labelLine: { length: 14, length2: 10 },
+        emphasis: { scale: true, scaleSize: 6, label: { fontWeight: 700, color: '#1F2329' } },
+        data: [
+          { value: 35.6, name: '居委会+村委会', itemStyle: { color: warm } },
+          { value: 40, name: '事业单位·含高校', itemStyle: { color: cool } },
+          { value: 24.4, name: '其他·机关企业等', itemStyle: { color: slate } }
+        ]
+      }],
+      animation: !reduce
+    });
+    window.addEventListener('resize', function () { oc.resize(); });
+  }
+
+  // ---------- 桑基图(沈阳) ----------
+  var sy = S.city_example_shenyang_2024_pct || {};
+  var el = document.getElementById('sankey');
+  if (el && typeof echarts !== 'undefined' && sy['事业单位']) {
+    var G_LOCK = '单位·企业·机关　76.2%';
+    var G_OPEN = '居委会·村委　18.7%';
+    var G_OTHER = '其他　5.1%';
+    var nodes = [
+      { name: '事业单位 43.6%', itemStyle: { color: cool } },
+      { name: '企业 29.7%', itemStyle: { color: cool } },
+      { name: '机关 2.9%', itemStyle: { color: cool } },
+      { name: '居委会 15.5%', itemStyle: { color: warm } },
+      { name: '村委会 3.2%', itemStyle: { color: warm } },
+      { name: '其他机构 5.1%', itemStyle: { color: slate } },
+      { name: G_LOCK, itemStyle: { color: coolDeep } },
+      { name: G_OPEN, itemStyle: { color: warmDeep } },
+      { name: G_OTHER, itemStyle: { color: slate } }
+    ];
+    var links = [
+      { source: '事业单位 43.6%', target: G_LOCK, value: sy['事业单位'] },
+      { source: '企业 29.7%', target: G_LOCK, value: sy['企业'] },
+      { source: '机关 2.9%', target: G_LOCK, value: sy['机关'] },
+      { source: '居委会 15.5%', target: G_OPEN, value: sy['居委会'] },
+      { source: '村委会 3.2%', target: G_OPEN, value: sy['村委会及农村组织'] },
+      { source: '其他机构 5.1%', target: G_OTHER, value: sy['其他机构'] }
+    ];
+    var chart = echarts.init(el, 'fitness', { renderer: 'canvas' });
+    chart.setOption({
+      tooltip: {
+        trigger: 'item',
+        formatter: function (p) {
+          if (p.dataType === 'edge') return p.data.source + ' → ' + p.data.target + '<br/>' + p.data.value.toFixed(2) + '%';
+          return '<b>' + p.name + '</b>';
+        }
+      },
+      series: [{
+        type: 'sankey', left: '2%', right: '15%', top: '5%', bottom: '5%',
+        nodeWidth: 16, nodeGap: 16, draggable: false,
+        emphasis: { focus: 'adjacency' },
+        label: { color: ink2, fontSize: 12, fontWeight: 600 },
+        lineStyle: { color: 'gradient', opacity: 0.42, curveness: 0.5 },
+        data: nodes, links: links
+      }],
+      animation: !reduce
+    });
+    window.addEventListener('resize', function () { chart.resize(); });
+  }
+
+  // ---------- 开放率温度计 ----------
+  var fill = document.getElementById('gauge-fill');
+  if (fill) {
+    var go = function () { fill.style.width = '30%'; };
+    if (reduce) { go(); }
+    else if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { go(); io.unobserve(e.target); } });
+      }, { threshold: 0.4 });
+      io.observe(fill);
+    } else { go(); }
+  }
+})();
+</script>
+<script defer src="assets/js/site.js"></script>
+</body>
+</html>

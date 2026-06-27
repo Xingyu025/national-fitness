@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>东中西的鸿沟 · 家门口的健身圈</title>
+<meta name="description" content="按官方四大区聚合，东西部人均场地只差 0.40㎡，真正垫底的是东北；而最大的差距藏在最富的东部内部——决定场地多少的不是方位，是土地与人口密度。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="region">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<main id="main">
+
+  <!-- ===== 引入 ===== -->
+  <section class="section section--tight">
+    <div class="container">
+      <span class="eyebrow" data-reveal></span>
+      <h1 class="mt-4" data-reveal data-delay="1">说好的“东西差距”，其实没那么深</h1>
+      <p class="lede measure mt-5" data-reveal data-delay="2">
+        看完地图，很容易得出“东富西穷”的结论。但把 31 个省按官方<b style="color:var(--ink)">四大地区</b>一聚合，
+        真正的故事是：区域之间的差距确实存在，却远没有想象中夸张——而最深的那道沟，藏在别处。
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ===== 分区柱状 ===== -->
+  <section class="section" style="border-top:none;padding-top:0;">
+    <div class="container container--wide">
+      <div class="figure" data-reveal>
+        <div class="figure__head">
+          <span class="figure__title">四大区人均体育场地面积 · 2024</span>
+          <span class="figure__hint">暖色 = 高于全国均值 · 虚线为全国均值 3.0㎡</span>
+        </div>
+        <div id="region-bar" class="chart-canvas" role="img"
+             aria-label="东中西东北四大区人均体育场地面积柱状图：东部 3.24，中部 2.91，西部 2.84，东北 2.67，仅东部高于全国均值"></div>
+        <p class="source">
+          区域人均 = Σ各省场地面积 ÷ Σ各省常住人口（常住人口由各省官方面积÷官方人均反算，反算全国值 3.006㎡ 与官方 3.0㎡ 吻合）。
+          区划依据国家统计局《第七次全国人口普查公报》。底层为板块03 逐省官方数据，详见<a href="method.html">数据说明</a>。
+        </p>
+      </div>
+
+      <div class="callout callout--cool callout--media mt-7" data-reveal>
+        <div class="callout__text">
+          <p class="callout__lead">东西之间只差 0.40㎡——东北的数据值得单独看一眼。</p>
+          <p class="callout__body">
+          东部（3.24㎡）与西部（2.84㎡）相差仅 <b>0.40㎡</b>、约 1.14 倍，所谓“鸿沟”并不夸张。
+          四区里最低的，是<b>东北（2.67㎡）</b>：东北人口持续外流，人少本该抬高人均，可它仍排在最后——
+          说明问题不在分母，而在分子，<b>场地的绝对供给偏弱</b>，老工业基地的转型欠账，落在了运动空间上。
+        </p>
+        </div>
+        <figure class="callout__media">
+          <img src="assets/img/cal-region-1.png" alt="区域对比示意" loading="lazy" onerror="this.closest('.callout__media').remove()">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 核心反框：鸿沟在内部 ===== -->
+  <section class="section section--cool-soft">
+    <div class="container">
+      <p class="pull" data-reveal>
+        最大的一道沟，不在东西之间，<br>而在<em>最富的东部</em>内部。
+      </p>
+      <p class="lede measure mt-6" data-reveal>
+        把每个区“摊平”看内部：东部内部从上海的 2.43㎡ 到江苏的 4.46㎡，极差 2.03㎡——
+        <b style="color:var(--ink)">比任何区域之间的差距都大</b>。下面每条横轴的色段，就是各区“最低省→最高省”的跨度。
+      </p>
+
+      <div class="figure mt-6" data-reveal>
+        <div id="rangelist" class="rangelist" aria-label="四大区内部最高—最低区间对比"></div>
+        <div class="rangelist__legend">
+          <span><i class="lg-seg"></i>区域内最低 → 最高省</span>
+          <span><i class="lg-avg"></i>区域均值</span>
+          <span><i class="lg-nat"></i>全国均值 3.0㎡</span>
+        </div>
+      </div>
+
+      <p class="lede measure mt-7" data-reveal>
+        结论很清楚：决定一个地方场地多少的，主要不是它在<b style="color:var(--ink)">东边还是西边</b>，
+        而是<b style="color:var(--ink)">土地够不够、人挤不挤</b>。地理方位，只是表象。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 场地 vs 经济 ===== -->
+  <section class="section" style="border-top:none;padding-top:0;">
+    <div class="container">
+      <div class="callout callout--cool callout--media" data-reveal>
+        <div class="callout__text">
+          <p class="callout__lead">而且，有钱也不等于有场地。</p>
+          <p class="callout__body">
+          上海人均 GDP 全国第 2，人均场地却倒数第 2；海南、宁夏并不富裕，人均场地却排进前 3；
+          江苏富、场地也多，甘肃穷、场地也少。经济能解释一部分，但远不是全部——
+          <b>土地、人口密度、政策投入</b>，共同决定了场地的供给。
+        </p>
+        </div>
+        <figure class="callout__media">
+          <img src="assets/img/cal-region-2.png" alt="经济与场地示意" loading="lazy" onerror="this.closest('.callout__media').remove()">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 过桥 ===== -->
+  <section class="section">
+    <div class="container">
+      <p class="pull" data-reveal>
+        既然不是东西之分，<br>那是什么，把场地“锁”在了某些地方？
+      </p>
+      <p class="lede measure mt-6" data-reveal>
+        打开这42亿平方米的账本，看看场地到底归了谁，门朝谁开。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- 引入顺序:echarts → 主题 → 数据 → 绘图 -->
+<script src="assets/js/echarts.min.js"></script>
+<script src="assets/js/chart-theme.js"></script>
+<script src="assets/data/regional-data.js"></script>
+<script>
+(function () {
+  var RD = window.REGIONAL_DATA || {};
+  var R = RD.regions || [];
+  if (!R.length) return;
+  var nat = (RD.metadata && RD.metadata.national_2024) || 3.0;
+  var P = window.FITNESS_PALETTE || {};
+  var warm = P.warm || '#F2994A', cool = P.cool || '#2D6CDF', coolDeep = P.coolDeep || '#1E4FB0';
+  var ink2 = P.ink2 || '#4A515C', ink3 = P.ink3 || '#79828F', line = P.line || '#E6E9EF';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- 1) 分区柱状 ----------
+  var el = document.getElementById('region-bar');
+  if (el && typeof echarts !== 'undefined') {
+    var chart = echarts.init(el, 'fitness', { renderer: 'canvas' });
+    var cats = R.map(function (d) { return d.region; });
+    var data = R.map(function (d) {
+      return { value: d.per_capita, itemStyle: { color: d.per_capita >= nat ? warm : cool } };
+    });
+    chart.setOption({
+      grid: { left: 6, right: 18, top: 26, bottom: 6, containLabel: true },
+      tooltip: {
+        trigger: 'item',
+        formatter: function (p) {
+          var d = R[p.dataIndex];
+          return '<b>' + d.region + '</b>（' + d.provinces_count + ' 省）<br/>人均 ' + d.per_capita.toFixed(2) +
+            ' ㎡/人<br/>最高 ' + d.max.province + ' ' + d.max.value.toFixed(2) +
+            ' · 最低 ' + d.min.province + ' ' + d.min.value.toFixed(2);
+        }
+      },
+      xAxis: {
+        type: 'category', data: cats, axisTick: { show: false },
+        axisLine: { lineStyle: { color: line } }, axisLabel: { color: ink2, fontWeight: 600 }
+      },
+      yAxis: {
+        type: 'value', min: 0, max: 3.5, interval: 1, name: '㎡ / 人', nameTextStyle: { color: ink3 },
+        axisLabel: { color: ink3, formatter: '{value}' },
+        splitLine: { lineStyle: { color: line, type: 'dashed' } }
+      },
+      series: [{
+        type: 'bar', data: data, barWidth: '46%',
+        label: { show: true, position: 'top', color: ink2, fontWeight: 600,
+                 formatter: function (p) { return p.value.toFixed(2); } },
+        markLine: {
+          silent: true, symbol: 'none', lineStyle: { color: '#3A4250', type: 'dashed', width: 1.5 },
+          label: { formatter: '全国均值 ' + nat + '㎡', position: 'insideEndTop', color: '#3A4250', fontSize: 12 },
+          data: [{ yAxis: nat }]
+        }
+      }],
+      animation: !reduce
+    });
+    window.addEventListener('resize', function () { chart.resize(); });
+  }
+
+  // ---------- 2) 内部区间条 ----------
+  var listEl = document.getElementById('rangelist');
+  if (listEl) {
+    var dmin = 1.8, dmax = 4.6;
+    function pct(v) { return (v - dmin) / (dmax - dmin) * 100; }
+    listEl.style.setProperty('--nat', pct(nat).toFixed(1) + '%');
+    var maxRange = Math.max.apply(null, R.map(function (d) { return d.internal_range; }));
+    listEl.innerHTML = R.map(function (d) {
+      var l = pct(d.min.value), w = pct(d.max.value) - l, a = pct(d.per_capita);
+      var wide = (d.internal_range === maxRange) ? ' rangerow--wide' : '';
+      return '<div class="rangerow' + wide + '">' +
+        '<div class="rangerow__head">' +
+          '<span class="rangerow__name">' + d.region + '<span class="cnt">' + d.provinces_count + ' 省</span></span>' +
+          '<span class="rangerow__meta">均值 <b>' + d.per_capita.toFixed(2) + '</b> · ' +
+            d.min.province + ' ' + d.min.value.toFixed(2) + ' → ' + d.max.province + ' ' + d.max.value.toFixed(2) +
+            ' · 内部极差 <b>' + d.internal_range.toFixed(2) + '</b></span>' +
+        '</div>' +
+        '<div class="rangerow__track">' +
+          '<div class="rangerow__seg" data-w="' + w.toFixed(1) + '" style="left:' + l.toFixed(1) + '%;width:' +
+            (reduce ? w.toFixed(1) + '%' : '0') + '"></div>' +
+          '<div class="rangerow__avg" style="left:' + a.toFixed(1) + '%"></div>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) {
+            var s = e.target;
+            s.style.transition = 'width .9s cubic-bezier(.22,.61,.36,1)';
+            s.style.width = s.getAttribute('data-w') + '%';
+            io.unobserve(s);
+          }
+        });
+      }, { threshold: 0.2 });
+      listEl.querySelectorAll('.rangerow__seg').forEach(function (s) { io.observe(s); });
+    }
+  }
+})();
+</script>
+<script defer src="assets/js/site.js"></script>
+</body>
+</html>

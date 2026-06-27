@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>把数字摊开在地图上 · 家门口的健身圈</title>
+<meta name="description" content="全国人均体育场地面积 3.0㎡，但 31 省里有 20 个在均值线以下，最高的江苏是最低西藏的 2.3 倍。一张分省地图，看清被平均数藏起来的差距。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="map">
+<a class="skip-link" href="#main">跳到正文</a>
+
+<main id="main">
+
+  <!-- ===== 引入 ===== -->
+  <section class="section section--tight">
+    <div class="container">
+      <span class="eyebrow" data-reveal></span>
+      <h1 class="mt-4" data-reveal data-delay="1">摊到地图上，3.0㎡ 是另一幅样子</h1>
+      <p class="lede measure mt-5" data-reveal data-delay="2">
+        全国人均 3.0㎡，听上去刚好达标。可把 31 个省一字排开，有 <b style="color:var(--ink)" id="below-count">20</b> 个压在均值线以下；
+        最高的江苏（4.46㎡）是最低的西藏（1.96㎡）的 <b style="color:var(--ink)">2.3 倍</b>——平均数，藏起了差距。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 地图（视觉中心） ===== -->
+  <section class="section" style="border-top:none;padding-top:0;">
+    <div class="container container--wide">
+      <div class="figure" data-reveal>
+        <div class="figure__head">
+          <span class="figure__title">31 省人均体育场地面积 · 2024</span>
+          <span class="figure__hint">颜色越深 = 人均越高 · 灰色为暂无数据 · 悬停高亮查看排名</span>
+        </div>
+        <div class="map-cue" data-reveal>
+          <span class="map-cue__dot" aria-hidden="true">👉</span>
+          <span>选你所在的省，看看你家门口排第几</span>
+        </div>
+        <div id="map-canvas" class="map-canvas" role="img"
+             aria-label="中国分省人均体育场地面积地图：东部沿海与部分西部省份较高，西藏、甘肃、上海等偏低"></div>
+        <p class="source">
+          <b>数据来源</b>：各省/自治区/直辖市体育局《2024 年度体育场地统计调查数据公告》，经本团队据省级官方原文逐条核对；
+          全国均值见国家体育总局《2024 年全国体育场地统计调查数据》。底图：DataV.GeoAtlas 标准地图。逐省来源见<a href="method.html">数据说明</a>。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 最锋利的一刀：上海悖论 ===== -->
+  <section class="section section--tight section--cool-soft">
+    <div class="container">
+      <div class="callout callout--alert callout--media" data-reveal>
+        <div class="callout__text">
+          <p class="callout__lead">全国最有钱的城市，人均场地却排到倒数第二。</p>
+          <p class="callout__body">
+          上海以国家统计口径 <b>2.43㎡</b> 排在第 30，仅高于西藏。土地越贵、人越密，“人均”反而越紧——
+          <b>有钱，买不来运动的空间</b>。一线城市的拥挤，和西部的稀疏，是两种完全不同的“不够”。
+        </p>
+        </div>
+        <figure class="callout__media">
+          <img src="assets/img/cal-map-1.png" alt="城市与场地示意" loading="lazy" onerror="this.closest('.callout__media').remove()">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 全员排行 ===== -->
+  <section class="section" style="border-top:none;padding-top:0;">
+    <div class="container">
+      <h2 data-reveal>把 31 个省，排成一队</h2>
+      <p class="lede measure mt-4" data-reveal data-delay="1">
+        地图看分布，排行看位次。下面这条队列里，红线是全国均值 3.0㎡——线左侧，站着大多数。
+      </p>
+      <div class="figure mt-6" data-reveal>
+        <div id="ranklist" class="ranklist" aria-label="31 省人均体育场地面积排行"></div>
+        <p class="ranklist__note"><span class="mk">▎</span> 竖红线 = 全国均值 3.0㎡/人；条形长度按 0–5㎡ 同一标尺，可直接比长短。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 反框：不是简单的东西部之争 + 分母效应 ===== -->
+  <section class="section">
+    <div class="container">
+      <p class="pull" data-reveal>
+        但这，并不是一个<span class="cool">“东富西穷”</span>的故事。
+      </p>
+      <p class="lede measure mt-6" data-reveal>
+        西部并非铁板一块：宁夏 3.51㎡ 排到全国第 3，青海、内蒙古也都不低。真正垫底的西藏、甘肃，
+        短板更多来自人口稀疏、地形受限、城市化尚在路上，而非简单一个“穷”字。把它压缩成东西之争，既不准确，也不公平。
+      </p>
+
+      <div class="callout callout--cool callout--media mt-7" data-reveal>
+        <div class="callout__text">
+          <p class="callout__lead">海南排第 2，靠的是“小分母”。</p>
+          <p class="callout__body">
+          人均 = 场地面积 ÷ 人口。人口少的省，天然在这个算式里占便宜。所以读这张图时要记住：
+          它量的是<b>“平均每人摊到多少”</b>，并不等于<b>“家门口就有”</b>。人均达标，和你下楼找得到场地，
+          是两件事——这也是后面几站要拆的问题。
+        </p>
+        </div>
+        <figure class="callout__media">
+          <img src="assets/img/cal-map-2.png" alt="海岛运动示意" loading="lazy" onerror="this.closest('.callout__media').remove()">
+        </figure>
+      </div>
+
+      <p class="lede measure mt-7" data-reveal>
+        于是真正该问的，不是“东边还是西边”，而是<b style="color:var(--ink)">“为什么差、差在哪”</b>。<br>
+        按官方四大地区将31个省聚合后，这条看不见的线会露出另一种面目。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<!-- 引入顺序固定：echarts → 主题 → 底图 → 数据 → 绘图 -->
+<script src="assets/js/echarts.min.js"></script>
+<script src="assets/js/chart-theme.js"></script>
+<script src="assets/js/china.js"></script>
+<script src="assets/data/map-data.js"></script>
+<script>
+(function () {
+  var MD = window.MAP_DATA || { data: [], metadata: {} };
+  var rows = MD.data.slice();
+  if (!rows.length) { return; }
+  var avg = (MD.metadata && MD.metadata.national_average) || 3.0;
+  var vals = rows.map(function (d) { return d.value; });
+  var vmin = Math.min.apply(null, vals);
+  var vmax = Math.max.apply(null, vals);
+  var P = window.FITNESS_PALETTE || {};
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // 蓝色顺序色阶:由浅到深 = 人均由低到高
+  var scale = P.mapScale || ['#EAF0FB','#C6D8F4','#9CBBEC','#6E97DF','#4574CE','#2D6CDF','#1E4FB0'];
+
+  var sorted = rows.slice().sort(function (a, b) { return b.value - a.value; });
+  var rankOf = {}; sorted.forEach(function (d, i) { rankOf[d.province] = i + 1; });
+
+  // 均值线下省份计数(动态,避免与正文脱节)
+  var below = rows.filter(function (d) { return d.value < avg; }).length;
+  var bc = document.getElementById('below-count'); if (bc) bc.textContent = below;
+
+  function colorFor(v) {
+    var t = (v - vmin) / (vmax - vmin);
+    var i = Math.round(t * (scale.length - 1));
+    return scale[Math.max(0, Math.min(scale.length - 1, i))];
+  }
+
+  // ---------- 1) 地图 ----------
+  var mapEl = document.getElementById('map-canvas');
+  if (mapEl && typeof echarts !== 'undefined') {
+    var chart = echarts.init(mapEl, 'fitness', { renderer: 'canvas' });
+    chart.setOption({
+      tooltip: {
+        trigger: 'item',
+        formatter: function (p) {
+          if (p.value == null || isNaN(p.value)) return '<b>' + p.name + '</b><br/>暂无数据';
+          var diff = p.value - avg;
+          var d = diff >= 0 ? '高于均值 ' + diff.toFixed(2) : '低于均值 ' + Math.abs(diff).toFixed(2);
+          return '<b>' + p.name + '</b><br/>人均 ' + p.value.toFixed(2) + ' ㎡/人<br/>全国第 ' + rankOf[p.name] + ' · ' + d;
+        }
+      },
+      visualMap: {
+        type: 'continuous',
+        min: Math.floor(vmin * 10) / 10, max: Math.ceil(vmax * 10) / 10,
+        left: 'left', bottom: 20, calculable: true, itemHeight: 140,
+        inRange: { color: scale }, text: ['高', '低'],
+        textStyle: { color: P.ink2 || '#4A515C' }
+      },
+      series: [{
+        name: '人均体育场地面积', type: 'map', map: 'china', roam: false,
+        itemStyle: { areaColor: '#EDF0F5', borderColor: '#FFFFFF', borderWidth: 0.8 },
+        label: {
+          show: true, fontSize: 9, color: '#2A2F37',
+          textBorderColor: 'rgba(255,255,255,.9)', textBorderWidth: 2.5,
+          formatter: function (p) {
+            var n = p.name;
+            if (n === '香港特别行政区' || n === '澳门特别行政区') return '';
+            if (n === '宁夏回族自治区') return '宁夏回族\n自治区';
+            if (n === '广西壮族自治区') return '广西壮族\n自治区';
+            return n;
+          }
+        },
+        emphasis: {
+          itemStyle: { areaColor: '#F2994A', borderColor: '#C9701B', borderWidth: 1.2,
+            shadowBlur: 10, shadowColor: 'rgba(201,112,27,.35)' },
+          label: { show: true, fontSize: 12, fontWeight: 'bold', color: '#1F2329',
+            textBorderColor: '#FFFFFF', textBorderWidth: 3 }
+        },
+        select: { disabled: true },
+        markLine: {
+          silent: true, symbol: ['none', 'none'], symbolSize: 0,
+          lineStyle: { type: 'dashed', color: '#8A93A0', width: 1, curveness: 0 },
+          data: [
+            [{ coord: [113.55, 22.17] }, { coord: [112.40, 21.50] }],
+            [{ coord: [114.17, 22.30] }, { coord: [115.40, 21.05] }]
+          ]
+        },
+        markPoint: {
+          silent: true, symbol: 'circle', symbolSize: 1, itemStyle: { color: 'transparent' },
+          label: {
+            show: true, fontSize: 9, color: '#2A2F37', lineHeight: 11, align: 'center',
+            textBorderColor: 'rgba(255,255,255,.95)', textBorderWidth: 2.5,
+            formatter: function (d) { return d.name.replace('特别行政区', '\n特别行政区'); }
+          },
+          data: [
+            { name: '澳门特别行政区', coord: [112.40, 21.50] },
+            { name: '香港特别行政区', coord: [115.40, 21.05] }
+          ]
+        },
+        data: rows.map(function (d) { return { name: d.province, value: d.value }; })
+      }],
+      animation: !reduce
+    });
+    window.addEventListener('resize', function () { chart.resize(); });
+  }
+
+  // ---------- 2) 排行条 ----------
+  var listEl = document.getElementById('ranklist');
+  if (listEl) {
+    var domainMax = Math.ceil(vmax);                 // 5
+    listEl.style.setProperty('--bar-avg', (avg / domainMax * 100).toFixed(1) + '%');
+    listEl.innerHTML = sorted.map(function (d, i) {
+      var pct = (d.value / domainMax * 100).toFixed(1);
+      var flag = '', hi = '';
+      if (d.province === '上海市') { flag = ' <span class="rankrow__flag flag--anomaly">最有钱却倒数</span>'; hi = ' rankrow--hi'; }
+      else if (i === 0) { flag = ' <span class="rankrow__flag flag--top">最高</span>'; hi = ' rankrow--hi'; }
+      else if (i === sorted.length - 1) { flag = ' <span class="rankrow__flag flag--low">最低</span>'; hi = ' rankrow--hi'; }
+      return '<div class="rankrow' + hi + '">' +
+        '<div class="rankrow__no">' + (i + 1) + '</div>' +
+        '<div class="rankrow__name">' + d.mapName + flag + '</div>' +
+        '<div class="rankrow__track"><div class="rankrow__fill" data-pct="' + pct + '" ' +
+        'style="background:' + colorFor(d.value) + (reduce ? (';width:' + pct + '%') : '') + '"></div></div>' +
+        '<div class="rankrow__val">' + d.value.toFixed(2) + '</div>' +
+        '</div>';
+    }).join('');
+
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting) {
+            var f = e.target;
+            f.style.transition = 'width .9s cubic-bezier(.22,.61,.36,1)';
+            f.style.width = f.getAttribute('data-pct') + '%';
+            io.unobserve(f);
+          }
+        });
+      }, { threshold: 0.1 });
+      listEl.querySelectorAll('.rankrow__fill').forEach(function (f) { io.observe(f); });
+    }
+  }
+})();
+</script>
+<script defer src="assets/js/site.js"></script>
+</body>
+</html>
