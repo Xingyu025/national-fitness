@@ -139,7 +139,7 @@
       '<p class="ft-note">中国数据新闻大赛 · AIGC 应用大赛参赛作品</p>'));
     fInner.appendChild(el("div", { class: "ft-col" },
       '<h4 class="ft-h">数据与声明</h4>' +
-      '<p class="ft-text">数据均来自官方公开来源,经人工逐条核对。图表自制 · 字体开源(思源系列) · 无个人隐私数据。</p>' +
+      '<p class="ft-text">数据均来自官方公开来源，经人工逐条核对。图表自制 · 无个人隐私数据。</p>' +
       '<p class="ft-text"><a href="method.html">查看数据说明与 AI 使用披露 →</a></p>'));
     fInner.appendChild(el("div", { class: "ft-col" },
       '<h4 class="ft-h">联系我们</h4>' +
@@ -153,7 +153,7 @@
     var fBar = el("div", { class: "site-footer__bar" });
     fBar.appendChild(el("div", { class: "container ft-bar__inner" },
       '<span>© 2026 <span class="ft-team__name">' + TEAM + '</span> · 保留所有权利</span>' +
-      '<span class="ft-bar__sub">数据来自官方公开来源,经人工逐条核对;图表自制,字体开源(思源系列),无个人隐私数据。</span>'));
+      '<span class="ft-bar__sub">数据来自官方公开来源，经人工逐条核对；图表自制，无个人隐私数据。</span>'));
     footer.appendChild(fBar);
 
     main.insertAdjacentElement("afterend", pager);
