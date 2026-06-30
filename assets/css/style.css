@@ -410,7 +410,7 @@ h3, .h3 { font-weight: 700; line-height: 1.4; font-size: clamp(1.15rem, 1.8vw, 1
 .callout--warm  .callout__lead { color: var(--warm-deep); }
 .callout--cool  .callout__lead { color: var(--cool-deep); }
 .callout--alert .callout__lead { color: #B23838; }
-.callout__body { color: var(--ink-2); margin-top: var(--s3); max-width: 62ch; }
+.callout__body { color: var(--ink-2); margin-top: var(--s3); max-width: 62ch; text-align: right;}
 .callout__body b { color: var(--ink); font-weight: 600; }
 /* 洞察框右侧配图(健身素材) */
 .callout--media { display: flex; align-items: center; gap: clamp(var(--s4), 3vw, var(--s6)); }
